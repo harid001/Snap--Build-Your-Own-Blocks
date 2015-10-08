@@ -6717,4 +6717,3 @@ StageHandleMorph.prototype.mouseLeave = function () {
     this.image = this.normalImage;
     this.changed();
 };
-

@@ -583,7 +583,7 @@ SpriteMorph.prototype.initBlocks = function () {
         },
 
     /* migrated to a newer block version:
-  
+
         receiveClick: {
             type: 'hat',
             category: 'control',
@@ -601,6 +601,11 @@ SpriteMorph.prototype.initBlocks = function () {
             type: 'hat',
             category: 'control',
             spec: 'when I receive %msgHat'
+        },
+        debug: {
+          type: 'command',
+          category: 'control',
+          spec: 'debug'
         },
         doBroadcast: {
             type: 'command',
@@ -1916,6 +1921,7 @@ SpriteMorph.prototype.blockTemplates = function (category) {
         blocks.push(block('removeClone'));
         blocks.push('-');
         blocks.push(block('doPauseAll'));
+        blocks.push(block('debug'));
 
     } else if (cat === 'sensing') {
 
