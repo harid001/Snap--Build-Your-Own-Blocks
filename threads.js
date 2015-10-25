@@ -1027,6 +1027,14 @@ Process.prototype.doStopCustomBlock = function () {
 };
 
 // Process continuations primitives
+Process.prototype.debug = function () {
+    Process.prototype.pause();
+    var world = this.context.receiver.world(),
+        dlg;
+    dlg = new DialogBoxMorph();
+    dlg.inform('Debug', 'basic step debugger', world);
+    dlg.drawNew();
+}
 
 Process.prototype.doCallCC = function (aContext, isReporter) {
     this.evaluate(
